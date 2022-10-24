@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    首页
+    科室年度考核
   </div>
 </template>
 

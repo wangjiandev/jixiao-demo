@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    首页
+    个人年度考核
   </div>
 </template>
 
