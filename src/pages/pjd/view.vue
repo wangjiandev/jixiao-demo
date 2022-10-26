@@ -51,7 +51,7 @@ const deptTableData = [
   <div class="py-12">
     <el-page-header class="pb-4" @back="goBack">
       <template #content>
-        <span class="text-large font-600 mr-3"> 王建 [2022年第一季度] 详情 </span>
+        <span class="text-large font-600 mr-3"> 王五 [2022年第一季度] 详情 </span>
       </template>
     </el-page-header>
     <el-card>

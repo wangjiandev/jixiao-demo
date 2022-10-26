@@ -17,7 +17,7 @@ const handleDelete = (index: number, row: User) => {
 const tableData: User[] = [
   {
     dept: '建设科',
-    name: '王建',
+    name: '王五',
     year: '2022',
     batch: '第一季度',
     score: '90',
@@ -31,14 +31,14 @@ const tableData: User[] = [
   },
   {
     dept: '养护科',
-    name: '许志图',
+    name: '许六六',
     year: '2022',
     batch: '第三季度',
     score: '90',
   },
   {
     dept: '路政科',
-    name: '朱运伟',
+    name: '朱八',
     year: '2022',
     batch: '第四季度',
     score: '90',

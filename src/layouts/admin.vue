@@ -21,18 +21,40 @@ const handleSelect = (key: string) => {
             LOGO
           </el-menu-item>
           <div class="flex-grow" />
-          <el-menu-item index="/djd">
-            科室季度考核
+          <el-menu-item index="/tongji">
+            绩效统计
           </el-menu-item>
-          <el-menu-item index="/pjd">
-            个人季度考核
+          <el-menu-item index="/minzhu">
+            民主测评
           </el-menu-item>
-          <el-menu-item index="/dnd">
-            科室年度考核
+          <el-menu-item index="/djctz">
+            科室创新奖惩台账
           </el-menu-item>
-          <el-menu-item index="/pnd">
-            个人年度考核
+          <el-menu-item index="/pjctz">
+            个人奖惩台账
           </el-menu-item>
+          <el-sub-menu index="2">
+            <template #title>
+              季度考核
+            </template>
+            <el-menu-item index="/djd">
+              科室季度考核
+            </el-menu-item>
+            <el-menu-item index="/pjd">
+              个人季度考核
+            </el-menu-item>
+          </el-sub-menu>
+          <el-sub-menu index="3">
+            <template #title>
+              季度考核
+            </template>
+            <el-menu-item index="/dnd">
+              科室年度考核
+            </el-menu-item>
+            <el-menu-item index="/pnd">
+              个人年度考核
+            </el-menu-item>
+          </el-sub-menu>
         </el-menu>
       </el-header>
       <el-main class="min-h-screen">
