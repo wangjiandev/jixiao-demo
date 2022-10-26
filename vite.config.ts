@@ -13,6 +13,7 @@ import Inspect from 'vite-plugin-inspect'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   resolve: {
@@ -45,6 +46,7 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
       ],
+      resolvers: [ElementPlusResolver()],
       dts: 'src/auto-imports.d.ts',
       dirs: [
         'src/composables',
@@ -57,6 +59,7 @@ export default defineConfig({
     Components({
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
+      resolvers: [ElementPlusResolver()],
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
