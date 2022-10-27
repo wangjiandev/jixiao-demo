@@ -27,9 +27,17 @@ const handleSelect = (key: string) => {
           <el-menu-item index="/minzhu">
             民主测评
           </el-menu-item>
-          <el-menu-item index="/djctz">
-            科室创新奖惩台账
-          </el-menu-item>
+          <el-sub-menu index="4">
+            <template #title>
+              科室年度创新奖惩
+            </template>
+            <el-menu-item index="/djctz/upload">
+              创新奖惩上报
+            </el-menu-item>
+            <el-menu-item index="/djctz">
+              创新奖惩评分
+            </el-menu-item>
+          </el-sub-menu>
           <el-menu-item index="/pjctz">
             个人奖惩台账
           </el-menu-item>

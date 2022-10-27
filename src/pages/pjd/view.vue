@@ -7,22 +7,22 @@ const goBack = () => {
 
 const tableData = [
   {
-    date: '张三',
+    date: '业务素质',
     name: '80分',
     address: '',
   },
   {
-    date: '李四',
+    date: '落实执行',
     name: '80分',
     address: '',
   },
   {
-    date: '王五',
+    date: '组织协调',
     name: '80分',
     address: '',
   },
   {
-    date: '赵六',
+    date: '积极创新',
     name: '80分',
     address: '',
   },
@@ -93,7 +93,7 @@ const deptTableData = [
       </el-descriptions>
 
       <div class="py-4 font-bold">
-        个人表现-考核评议表
+        个人表现-子指标得分
       </div>
       <el-table :data="tableData" :border="true" style="width: 100%">
         <el-table-column prop="date" label="姓名" width="180" />
