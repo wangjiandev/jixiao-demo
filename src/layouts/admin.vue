@@ -17,10 +17,6 @@ const handleSelect = (key: string) => {
           :router="true"
           @select="handleSelect"
         >
-          <el-menu-item index="/">
-            LOGO
-          </el-menu-item>
-          <div class="flex-grow" />
           <el-menu-item index="/tongji">
             绩效统计
           </el-menu-item>
@@ -50,16 +46,30 @@ const handleSelect = (key: string) => {
             <template #title>
               季度考核
             </template>
-            <el-menu-item index="/djd">
-              科室季度考核
-            </el-menu-item>
+            <el-sub-menu index="20">
+              <template #title>
+                科室季度考核
+              </template>
+              <el-menu-item index="/djd">
+                考核汇总
+              </el-menu-item>
+              <el-menu-item index="/djd/dj">
+                党的建设评分
+              </el-menu-item>
+              <el-menu-item index="/djd/zezy">
+                主责主业
+              </el-menu-item>
+              <el-menu-item index="/djd/ddph">
+                担当配合
+              </el-menu-item>
+            </el-sub-menu>
             <el-menu-item index="/pjd">
               个人季度考核
             </el-menu-item>
           </el-sub-menu>
           <el-sub-menu index="3">
             <template #title>
-              季度考核
+              年度考核
             </template>
             <el-menu-item index="/dnd">
               科室年度考核

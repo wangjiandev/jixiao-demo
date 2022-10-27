@@ -7,11 +7,9 @@ interface User {
   score: string
 }
 const handleAdd = (index: number, row: User) => {
-  router.push('/djd/add')
+  router.push('/djd/djadd')
 }
-const handleEdit = (index: number, row: User) => {
-  router.push('/djd/view')
-}
+
 const handleDelete = (index: number, row: User) => {
 }
 
@@ -52,11 +50,14 @@ const batchOptions = ref<string[]>(['第一季度', '第二季度', '第三季�
     <el-card class="box-card">
       <template #header>
         <div class="card-header">
-          <span>科室季度考核</span>
+          <span>担当配合评分</span>
         </div>
       </template>
       <div class="mb-4">
-        <el-select placeholder="科室">
+        <el-button type="success" @click="handleAdd">
+          新增科室担当配合评分
+        </el-button>
+        <el-select class="ml-4" placeholder="科室">
           <el-option
             v-for="item in deptOptions"
             :key="item"
@@ -86,19 +87,14 @@ const batchOptions = ref<string[]>(['第一季度', '第二季度', '第三季�
         <el-table-column prop="dept" label="科室名称" align="center" />
         <el-table-column prop="year" label="年份" align="center" />
         <el-table-column prop="batch" label="考核季度" align="center" />
-        <el-table-column prop="score" label="总得分" width="120" align="center" />
-        <el-table-column label="得分明细" align="center">
-          <el-table-column prop="score" label="党的建设" align="center" />
-          <el-table-column label="主责主业" align="center">
-            <el-table-column prop="score" label="综合工作" align="center" />
-            <el-table-column prop="score" label="重点工作" align="center" />
-          </el-table-column>
-          <el-table-column prop="score" label="担当配合" align="center" />
-        </el-table-column>
+        <el-table-column prop="score" label="担当配合得分" width="120" align="center" />
         <el-table-column label="操作" align="center">
           <template #default="scope">
-            <el-button size="small" @click="handleEdit(scope.$index, scope.row)">
-              详情
+            <el-button
+              size="small"
+              @click="handleDelete(scope.$index, scope.row)"
+            >
+              修改
             </el-button>
           </template>
         </el-table-column>
