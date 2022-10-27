@@ -6,13 +6,9 @@ interface User {
   batch: string
   score: string
 }
-const handleAdd = (index: number, row: User) => {
-  router.push('/djd/add')
-}
+
 const handleEdit = (index: number, row: User) => {
   router.push('/djd/view')
-}
-const handleDelete = (index: number, row: User) => {
 }
 
 const tableData: User[] = [

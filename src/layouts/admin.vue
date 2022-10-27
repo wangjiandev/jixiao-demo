@@ -63,9 +63,26 @@ const handleSelect = (key: string) => {
                 担当配合
               </el-menu-item>
             </el-sub-menu>
-            <el-menu-item index="/pjd">
-              个人季度考核
-            </el-menu-item>
+            <el-sub-menu index="300">
+              <template #title>
+                个人季度考核
+              </template>
+              <el-menu-item index="/pjd">
+                考核汇总
+              </el-menu-item>
+              <el-menu-item index="/pjd/pdzf">
+                品德作风
+              </el-menu-item>
+              <el-menu-item index="/pjd/gzyj">
+                工作业绩
+              </el-menu-item>
+              <el-menu-item index="/pjd/grbx">
+                个人表现
+              </el-menu-item>
+              <el-menu-item index="/pjd/jkf">
+                奖扣分
+              </el-menu-item>
+            </el-sub-menu>
           </el-sub-menu>
           <el-sub-menu index="3">
             <template #title>
