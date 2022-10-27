@@ -46,7 +46,7 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
       ],
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver({ ssr: true })],
       dts: 'src/auto-imports.d.ts',
       dirs: [
         'src/composables',
@@ -59,7 +59,7 @@ export default defineConfig({
     Components({
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver({ ssr: true })],
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
