@@ -75,7 +75,7 @@ const batchOptions = ref<string[]>(['第一季度', '第二季度', '第三季�
             :value="item"
           />
         </el-select>
-        <el-select class="ml-4" placeholder="批次">
+        <el-select class="ml-4" placeholder="季度">
           <el-option
             v-for="item in batchOptions"
             :key="item"
@@ -89,7 +89,7 @@ const batchOptions = ref<string[]>(['第一季度', '第二季度', '第三季�
         <el-table-column prop="dept" label="科室名称" align="center" />
         <el-table-column prop="name" label="名称" align="center" />
         <el-table-column prop="year" label="年份" align="center" />
-        <el-table-column prop="batch" label="考核批次" align="center" />
+        <el-table-column prop="batch" label="考核季度" align="center" />
         <el-table-column prop="score" label="总得分" width="120" align="center" />
         <el-table-column label="得分明细" align="center">
           <el-table-column prop="score" label="品德作风" align="center" />

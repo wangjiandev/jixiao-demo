@@ -87,7 +87,7 @@ const deptTableData2 = [
         <el-descriptions-item label="年度">
           2022年
         </el-descriptions-item>
-        <el-descriptions-item label="考核批次">
+        <el-descriptions-item label="考核季度">
           第一季度
         </el-descriptions-item>
         <el-descriptions-item label="总得分" :span="2">

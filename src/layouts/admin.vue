@@ -38,9 +38,14 @@ const handleSelect = (key: string) => {
               创新奖惩评分
             </el-menu-item>
           </el-sub-menu>
-          <el-menu-item index="/pjctz">
-            个人奖惩台账
-          </el-menu-item>
+          <el-sub-menu index="5">
+            <template #title>
+              个人奖惩
+            </template>
+            <el-menu-item index="/pjctz">
+              个人奖惩管理
+            </el-menu-item>
+          </el-sub-menu>
           <el-sub-menu index="2">
             <template #title>
               季度考核

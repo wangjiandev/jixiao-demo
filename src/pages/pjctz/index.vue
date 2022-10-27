@@ -2,38 +2,43 @@
 const router = useRouter()
 interface User {
   dept: string
+  name: string
   year: string
   batch: string
   score: string
 }
 
 const handleEdit = (index: number, row: User) => {
-  router.push('/djd/view')
+  router.push('/pjd/view')
 }
 const handleDelete = (index: number, row: User) => {
 }
 
 const tableData: User[] = [
   {
-    dept: '养护科',
+    dept: '建设科',
+    name: '王五',
     year: '2022',
     batch: '第一季度',
     score: '90',
   },
   {
-    dept: '养护科',
+    dept: '建设科',
+    name: '刘德华',
     year: '2022',
     batch: '第二季度',
     score: '90',
   },
   {
     dept: '养护科',
+    name: '许六六',
     year: '2022',
     batch: '第三季度',
     score: '90',
   },
   {
-    dept: '养护科',
+    dept: '路政科',
+    name: '朱八',
     year: '2022',
     batch: '第四季度',
     score: '90',
@@ -50,7 +55,7 @@ const batchOptions = ref<string[]>(['第一季度', '第二季度', '第三季�
     <el-card class="box-card">
       <template #header>
         <div class="card-header">
-          <span>科室季度考核</span>
+          <span>个人奖惩管理</span>
         </div>
       </template>
       <div class="mb-4">
@@ -82,16 +87,15 @@ const batchOptions = ref<string[]>(['第一季度', '第二季度', '第三季�
       <el-table :data="tableData" style="width: 100%">
         <el-table-column type="index" width="50" />
         <el-table-column prop="dept" label="科室名称" align="center" />
+        <el-table-column prop="name" label="名称" align="center" />
         <el-table-column prop="year" label="年份" align="center" />
         <el-table-column prop="batch" label="考核季度" align="center" />
         <el-table-column prop="score" label="总得分" width="120" align="center" />
         <el-table-column label="得分明细" align="center">
-          <el-table-column prop="score" label="党的建设" align="center" />
-          <el-table-column label="主责主业" align="center">
-            <el-table-column prop="score" label="综合工作" align="center" />
-            <el-table-column prop="score" label="重点工作" align="center" />
-          </el-table-column>
-          <el-table-column prop="score" label="担当配合" align="center" />
+          <el-table-column prop="score" label="品德作风" align="center" />
+          <el-table-column prop="score" label="工作业绩" align="center" />
+          <el-table-column prop="score" label="个人表现" align="center" />
+          <el-table-column prop="score" label="奖扣分" align="center" />
         </el-table-column>
         <el-table-column label="操作" align="center">
           <template #default="scope">
