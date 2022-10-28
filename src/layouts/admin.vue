@@ -18,7 +18,7 @@ const handleSelect = (key: string) => {
           @select="handleSelect"
         >
           <el-menu-item index="/tongji">
-            作任务目标清单
+            工作任务目标清单
           </el-menu-item>
 
           <el-sub-menu index="2">
