@@ -17,10 +17,28 @@ const handleSelect = (key: string) => {
           :router="true"
           @select="handleSelect"
         >
-          <el-menu-item index="/tongji">
-            工作任务目标清单
-          </el-menu-item>
-
+          <el-sub-menu index="tongji">
+            <template #title>
+              工作任务目标清单
+            </template>
+            <el-menu-item index="/dtongji">
+              科室工作任务目标清单
+            </el-menu-item>
+            <el-menu-item index="/ptongji">
+              个人工作任务目标清单
+            </el-menu-item>
+          </el-sub-menu>
+          <el-sub-menu index="7">
+            <template #title>
+              绩效公示
+            </template>
+            <el-menu-item index="/djxgs">
+              科室绩效公示
+            </el-menu-item>
+            <el-menu-item index="/pjxgs">
+              个人绩效公示
+            </el-menu-item>
+          </el-sub-menu>
           <el-sub-menu index="2">
             <template #title>
               季度考核
@@ -29,9 +47,6 @@ const handleSelect = (key: string) => {
               <template #title>
                 科室季度考核
               </template>
-              <el-menu-item index="/djd">
-                考核汇总
-              </el-menu-item>
               <el-menu-item index="/djd/dj">
                 党的建设评分
               </el-menu-item>
@@ -41,14 +56,14 @@ const handleSelect = (key: string) => {
               <el-menu-item index="/djd/ddph">
                 担当配合
               </el-menu-item>
+              <el-menu-item index="/djd">
+                考核汇总
+              </el-menu-item>
             </el-sub-menu>
             <el-sub-menu index="300">
               <template #title>
                 个人季度考核
               </template>
-              <el-menu-item index="/pjd">
-                考核汇总
-              </el-menu-item>
               <el-menu-item index="/pjd/pdzf">
                 品德作风
               </el-menu-item>
@@ -61,30 +76,43 @@ const handleSelect = (key: string) => {
               <el-menu-item index="/pjd/jkf">
                 奖扣分
               </el-menu-item>
+              <el-menu-item index="/pjd">
+                考核汇总
+              </el-menu-item>
             </el-sub-menu>
           </el-sub-menu>
           <el-sub-menu index="3">
             <template #title>
               年度考核
             </template>
-            <el-menu-item index="/dnd">
-              科室年度考核
-            </el-menu-item>
-            <el-menu-item index="/pnd">
-              个人年度考核
-            </el-menu-item>
-            <el-menu-item index="/minzhu">
-              民主测评
-            </el-menu-item>
-            <el-sub-menu index="4">
+            <el-sub-menu index="6">
               <template #title>
-                科室年度创新奖惩
+                科室年度考核
               </template>
-              <el-menu-item index="/djctz/upload">
-                创新奖惩上报
+              <el-menu-item index="/dnd">
+                科室年度考核
               </el-menu-item>
-              <el-menu-item index="/djctz">
-                创新奖惩评分
+              <el-sub-menu index="4">
+                <template #title>
+                  科室年度创新奖惩
+                </template>
+                <el-menu-item index="/djctz/upload">
+                  创新奖惩上报
+                </el-menu-item>
+                <el-menu-item index="/djctz">
+                  创新奖惩评分
+                </el-menu-item>
+              </el-sub-menu>
+            </el-sub-menu>
+            <el-sub-menu index="5">
+              <template #title>
+                个人年度考核
+              </template>
+              <el-menu-item index="/pnd">
+                个人年度考核
+              </el-menu-item>
+              <el-menu-item index="/minzhu">
+                民主测评
               </el-menu-item>
             </el-sub-menu>
           </el-sub-menu>
