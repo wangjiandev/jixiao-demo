@@ -28,16 +28,32 @@ const handleSelect = (key: string) => {
               个人工作任务目标清单
             </el-menu-item>
           </el-sub-menu>
-          <el-sub-menu index="7">
+          <el-sub-menu index="400">
             <template #title>
-              绩效公示
+              自评总结
             </template>
-            <el-menu-item index="/djxgs">
-              科室绩效公示
-            </el-menu-item>
-            <el-menu-item index="/pjxgs">
-              个人绩效公示
-            </el-menu-item>
+            <el-sub-menu index="4001">
+              <template #title>
+                科室工作自评总结
+              </template>
+              <el-menu-item index="/djdzj">
+                季度自评总结
+              </el-menu-item>
+              <el-menu-item index="/dndzj">
+                年度自评总结
+              </el-menu-item>
+            </el-sub-menu>
+            <el-sub-menu index="4002">
+              <template #title>
+                个人工作自评总结
+              </template>
+              <el-menu-item index="/pjdzj">
+                季度自评总结
+              </el-menu-item>
+              <el-menu-item index="/pndzj">
+                年度自评总结
+              </el-menu-item>
+            </el-sub-menu>
           </el-sub-menu>
           <el-sub-menu index="2">
             <template #title>
@@ -116,16 +132,32 @@ const handleSelect = (key: string) => {
               </el-menu-item>
             </el-sub-menu>
           </el-sub-menu>
-          <el-sub-menu index="400">
+          <el-sub-menu index="7">
             <template #title>
-              自评总结
+              绩效公示
             </template>
-            <el-menu-item index="/djdzj">
-              科室季度工作自评总结
-            </el-menu-item>
-            <el-menu-item index="/pjdzj">
-              个人季度工作自评总结
-            </el-menu-item>
+            <el-sub-menu index="701">
+              <template #title>
+                科室绩效公示
+              </template>
+              <el-menu-item index="/djdjxgs">
+                季度绩效公示
+              </el-menu-item>
+              <el-menu-item index="/dndjxgs">
+                年度绩效公示
+              </el-menu-item>
+            </el-sub-menu>
+            <el-sub-menu index="702">
+              <template #title>
+                个人绩效公示
+              </template>
+              <el-menu-item index="/pjdjxgs">
+                季度绩效公示
+              </el-menu-item>
+              <el-menu-item index="/pndjxgs">
+                年度绩效公示
+              </el-menu-item>
+            </el-sub-menu>
           </el-sub-menu>
         </el-menu>
       </el-header>

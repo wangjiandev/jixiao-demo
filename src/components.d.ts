@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    copy: typeof import('./components/ListLatest copy.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
     ElAlert: typeof import('element-plus/lib')['ElAlert']
     ElButton: typeof import('element-plus/lib')['ElButton']
@@ -31,6 +32,8 @@ declare module '@vue/runtime-core' {
     ElTableColumn: typeof import('element-plus/lib')['ElTableColumn']
     ElTag: typeof import('element-plus/lib')['ElTag']
     Footer: typeof import('./components/Footer.vue')['default']
+    ListLatest: typeof import('./components/ListLatest.vue')['default']
+    ListLatestDept: typeof import('./components/ListLatestDept.vue')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
