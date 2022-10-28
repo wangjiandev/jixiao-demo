@@ -18,22 +18,9 @@ const handleSelect = (key: string) => {
           @select="handleSelect"
         >
           <el-menu-item index="/tongji">
-            绩效统计
+            作任务目标清单
           </el-menu-item>
-          <el-menu-item index="/minzhu">
-            民主测评
-          </el-menu-item>
-          <el-sub-menu index="4">
-            <template #title>
-              科室年度创新奖惩
-            </template>
-            <el-menu-item index="/djctz/upload">
-              创新奖惩上报
-            </el-menu-item>
-            <el-menu-item index="/djctz">
-              创新奖惩评分
-            </el-menu-item>
-          </el-sub-menu>
+
           <el-sub-menu index="2">
             <template #title>
               季度考核
@@ -85,6 +72,31 @@ const handleSelect = (key: string) => {
             </el-menu-item>
             <el-menu-item index="/pnd">
               个人年度考核
+            </el-menu-item>
+            <el-menu-item index="/minzhu">
+              民主测评
+            </el-menu-item>
+            <el-sub-menu index="4">
+              <template #title>
+                科室年度创新奖惩
+              </template>
+              <el-menu-item index="/djctz/upload">
+                创新奖惩上报
+              </el-menu-item>
+              <el-menu-item index="/djctz">
+                创新奖惩评分
+              </el-menu-item>
+            </el-sub-menu>
+          </el-sub-menu>
+          <el-sub-menu index="400">
+            <template #title>
+              自评总结
+            </template>
+            <el-menu-item index="/djdzj">
+              科室季度工作自评总结
+            </el-menu-item>
+            <el-menu-item index="/pjdzj">
+              个人季度工作自评总结
             </el-menu-item>
           </el-sub-menu>
         </el-menu>
